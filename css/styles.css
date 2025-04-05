@@ -1,0 +1,183 @@
+/* Load custom font using @font-face */
+@font-face {
+    font-family: 'Aubrey';  /* Define a name for your font */
+    src: url('../assets/fonts/Aubrey-Regular.ttf') format('truetype');  /* Adjust path if needed */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Reset default margin/padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply custom font to everything */
+body {
+    background-color: #e6f2ff;
+    margin: 0;
+    padding: 0;
+    font-family: 'Aubrey', sans-serif; /* Apply the custom font globally */
+    height: auto; /* Allow content to expand */
+    overflow-y: scroll; /* Enable scrolling */
+    padding-top: 40px; /* Add padding at the top to prevent content from being covered by the fixed tooltip */
+}
+
+/* Center everything in the viewport */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Adjust alignment for scroll */
+    width: 100%;
+    max-height: 100%; /* Remove restriction */
+    overflow-y: auto; /* Enable scrolling */
+}
+
+/* Vending Machine Styling */
+.vending-wrapper {
+    position: relative;
+    width: 600px; /* Match image width */
+    height: auto; /* Let content stretch based on items */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ensure the vending machine image fits */
+.vending-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Clickable slots */
+.slot {
+    position: absolute;
+    width: 25%;
+    height: 12%; /* Adjust height for a better fit */
+    background: rgba(8, 7, 7, 0.3); /* Visible for debugging */
+    border: 2px solid transparent;
+    transition: border 0.2s ease;
+}
+
+/* Left side slots */
+.left-slot {
+    left: 15%;
+}
+
+/* Right side slots */
+.right-slot {
+    left: 49%;
+}
+
+/* Hover effect */
+.slot:hover {
+    border: 2px solid #00f;
+}
+
+/* Update Section */
+.update-section {
+    background-color: #fff;
+    padding: 20px;
+    width: 50%;
+    text-align: center;
+    position: relative;
+    bottom: 0;  
+    left: 50%;  
+    transform: translateX(-50%);  
+    border-top: 2px solid #ccc;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-height: 300px; 
+    overflow-y: auto; 
+    margin-bottom: 30px; 
+    z-index: 1000;  
+}
+
+.update-section h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.update-section p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* Tooltip Section (fixed at the top) */
+.tooltip-section {
+    background-color: transparent;  /* Make the background fully transparent */
+    padding: 0px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: none;  /* Remove the border for transparency */
+    box-shadow: none;  /* Remove any shadow */
+    z-index: 1000;
+    font-size: 14px;
+    visibility: hidden;  /* Start with hidden visibility */
+    height: 0;  /* Prevent it from taking up space */
+    overflow: hidden; /* Hide any content when the height is zero */
+    transition: visibility 0s, height 0.3s ease-in-out; /* Smooth transition */
+}
+
+#tooltip-text {
+    font-size: 40px;
+    color: #333;  /* Set text color */
+}
+
+/* Show tooltip text when hovering over the slots */
+.slot:hover ~ .tooltip-section {
+    visibility: visible;  /* Show the tooltip */
+}
+
+/* Under Construction Styling */
+.under-construction {
+    text-align: center;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%; /* Position it vertically in the center */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+}
+
+.under-construction h1 {
+    font-size: 36px;
+    font-family: 'Aubrey', sans-serif;
+    color: #333;
+}
+
+.under-construction p {
+    font-size: 20px;
+    font-family: 'Aubrey', sans-serif;
+    color: #666;
+}
+/* Sitemap Styling */
+.sitemap-list {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.sitemap-list li {
+    margin: 10px 0;
+}
+
+.sitemap-list a {
+    text-decoration: none;
+    color: #333;
+    font-family: 'Aubrey', sans-serif;
+    font-size: 18px;
+}
+
+.sitemap-list a:hover {
+    color: #00f;
+}
