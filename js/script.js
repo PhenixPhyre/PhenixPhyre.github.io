@@ -1,22 +1,20 @@
-// Get all slot elements
-const slots = document.querySelectorAll('.slot');
-
-// Get the tooltip text element
+// Get all slot elements and Tooltip
+const slots = document.querySelectorAll('.slot'); 
 const tooltipText = document.getElementById('tooltip-text');
 
-// Add hover event listener to each slot
+// Hover Event 
 slots.forEach(slot => {
     slot.addEventListener('mouseover', function() {
-        tooltipText.textContent = slot.getAttribute('data-tooltip'); // Update text on hover
+        tooltipText.textContent = slot.getAttribute('data-tooltip'); 
         const tooltipSection = document.querySelector('.tooltip-section');
-        tooltipSection.style.visibility = 'visible'; // Make tooltip visible
-        tooltipSection.style.height = '45px'; // Allow the tooltip to take up space
+        tooltipSection.style.visibility = 'visible'; 
+        tooltipSection.style.height = '45px';
     });
 
     slot.addEventListener('mouseout', function() {
-        tooltipText.textContent = ""; // Clear text when not hovering
+        tooltipText.textContent = ""; 
         const tooltipSection = document.querySelector('.tooltip-section');
-        tooltipSection.style.visibility = 'hidden'; // Hide the tooltip
-        tooltipSection.style.height = '0'; // Collapse the tooltip section
+        tooltipSection.style.visibility = 'hidden'; 
+        tooltipSection.style.height = '0'; 
     });
 });
