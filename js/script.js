@@ -5,7 +5,7 @@ const tooltipSection = document.querySelector('.tooltip-section');
 const topTooltipSection = document.querySelector('.top-tooltip-section');
 const topTooltipText = document.getElementById('top-tooltip-text');
 
-// Hover Event for Mouse-following Tooltip
+// Hover Event for Mouse-following
 slots.forEach(slot => {
     slot.addEventListener('mouseover', function () {
         tooltipText.textContent = slot.getAttribute('data-tooltip');
@@ -14,7 +14,7 @@ slots.forEach(slot => {
 
         // Show the top tooltip text
         showTopTooltip(slot.getAttribute('data-tooltip'));
-        clearTimeout(window.topTooltipTimeout);  // Prevent timeout for hiding the top tooltip
+        clearTimeout(window.topTooltipTimeout); 
     });
 
     slot.addEventListener('mouseout', function () {
@@ -22,16 +22,16 @@ slots.forEach(slot => {
         tooltipSection.style.visibility = 'hidden';
         tooltipSection.style.height = '0';
 
-        // Start a timeout to hide the top tooltip after mouseout
+       
         window.topTooltipTimeout = setTimeout(() => {
             topTooltipSection.style.visibility = 'hidden';
             topTooltipSection.style.height = '0';
-        }, 0); // Timeout 0ms, almost immediately hides it
+        }, 0); // Timeout
     });
 
     // Track mouse movement and update tooltip position
     slot.addEventListener('mousemove', function (e) {
-        const mouseX = e.pageX + 10; // Adds a slight offset from the mouse
+        const mouseX = e.pageX + 10; // Offset from mouse
         const mouseY = e.pageY + 10;
 
         tooltipSection.style.left = mouseX + 'px';
@@ -42,7 +42,7 @@ slots.forEach(slot => {
 // Tooltip for Top Section
 function showTopTooltip(message) {
     if (window.scrollY === 0) {
-        topTooltipText.textContent = message; // Display the tooltip text
+        topTooltipText.textContent = message; 
         topTooltipSection.style.visibility = 'visible';
         topTooltipSection.style.height = '45px';
     }
