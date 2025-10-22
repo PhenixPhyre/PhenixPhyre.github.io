@@ -10,7 +10,7 @@ slots.forEach(slot => {
     slot.addEventListener('mouseover', function () {
         tooltipText.textContent = slot.getAttribute('data-tooltip');
         tooltipSection.style.visibility = 'visible';
-        tooltipSection.style.height = '45px';
+        tooltipSection.style.height = '30px';
 
         // Show the top tooltip text
         showTopTooltip(slot.getAttribute('data-tooltip'));
@@ -31,7 +31,7 @@ slots.forEach(slot => {
 
     // Track mouse movement and update tooltip position
     slot.addEventListener('mousemove', function (e) {
-        const mouseX = e.pageX + 10; // Offset from mouse
+        const mouseX = e.pageX + 10; // Offset 
         const mouseY = e.pageY + 10;
 
         tooltipSection.style.left = mouseX + 'px';
@@ -46,15 +46,4 @@ function showTopTooltip(message) {
         topTooltipSection.style.visibility = 'visible';
         topTooltipSection.style.height = '45px';
     }
-}
-
-// Listen for the scroll event to hide/show top tooltip
-window.addEventListener('scroll', function () {
-    if (window.scrollY === 0) {
-        topTooltipSection.style.visibility = 'visible';
-        topTooltipSection.style.height = '45px';
-    } else {
-        topTooltipSection.style.visibility = 'hidden';
-        topTooltipSection.style.height = '0';
-    }
-});
+};

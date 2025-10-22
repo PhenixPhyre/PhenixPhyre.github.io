@@ -23,6 +23,19 @@ body {
     padding-top: 10px; 
 }
 
+/* Top */
+.toptext{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    width: 100%;
+    max-height: 80%; 
+    overflow-y: auto; 
+    color: #252424;
+    font-size: 25px;
+    text-shadow: 2px 2px #cfcaca;
+}
+
 /* Center */
 .container {
     display: flex;
@@ -31,9 +44,6 @@ body {
     width: 100%;
     max-height: 100%; 
     overflow-y: auto; 
-    color: #252424;
-    font-size: 30px;
-    text-shadow: 2px 2px #cfcaca;
 }
 
 /* Vending Machine  */
@@ -105,7 +115,7 @@ body {
     height: 0;
     overflow: hidden;
     text-shadow: 2px 2px #cfcaca;
-    transition: visibility 0s, height 0.3s ease-in-out;
+    transition: visibility 0s, height 0.2s ease-in-out;
 }
 
 #top-tooltip-text {
@@ -119,19 +129,20 @@ body {
     position: absolute;
     visibility: hidden;  
     height: 0;  
-    font-size: 18px;
-    padding: 10px;
+    font-size: 12px;
+    padding: 0px;
     border-radius: 5px;
     pointer-events: none; 
     z-index: 1000; 
     transition: visibility 2s, height 0.3s ease-in-out;
-    text-shadow: 2px 2px #cfcaca;
+    background-color:rgb(167, 202, 226);
+    text-shadow: 2px 2px #dfdfdf;
 }
 
 #tooltip-text {
     font-weight: bolder;
-    font-size: 40px;
-    color: #252424;  
+    font-size: 25px;
+    color: #000000;  
 }
 
 /* Show tooltip hovering  */
