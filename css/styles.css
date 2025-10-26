@@ -14,7 +14,7 @@
 
 /* Body */
 body {
-    background-color: #e6f2ff;
+    background-color: #94999e;
     margin: 0;
     padding: 0;
     font-family: 'Aubrey', sans-serif; 
@@ -202,86 +202,6 @@ body {
 .vending-wrapper {
     width: 100%;
     max-width: 600px;
-}
-
-@media (max-width: 768px) {
-    .container {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start; 
-        width: 100%;
-        max-height: 100%; 
-        overflow-y: auto; 
-        color: #333;
-        font-size: 15px;
-        text-shadow: 3px 3px #969696;
-    }
-    .vending-wrapper {
-        width: 95%;
-    }
-
-    .slot {
-        width: 25%;
-        height: 10%;
-    }
-
-    #tooltip-text {
-        font-size: 24px;
-    }
-
-    .update-section {
-        width: 90%;
-        font-size: 14px;
-    }
-    
-    .tooltip-section {
-        visibility: hidden;  
-        height: 0;
-    }
-
-    .slot:hover ~ .tooltip-section {
-        visibility: visible;
-        height: auto;
-        font-size: 18px; 
-    }
-}
-
-
-@media (max-width: 480px) {
-    .container {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start; 
-        width: 100%;
-        max-height: 100%; 
-        overflow-y: auto; 
-        color: #333;
-        font-size: 15px;
-        text-shadow: 3px 3px #969696;
-    }
-    .slot {
-        width: 25%;
-        height: 12%;
-    }
-
-    .update-section {
-        font-size: 13px;
-    }
-
-    #tooltip-text {
-        font-size: 15px;
-    }
-
-    .tooltip-section {
-        visibility: hidden; 
-        height: 0;
-    }
-
-    .slot:hover ~ .tooltip-section {
-        visibility: visible;
-        height: auto;
-        font-size: 18px; 
-    }
 }
 
 /* Garden */
