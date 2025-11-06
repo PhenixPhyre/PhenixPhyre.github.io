@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "Aubrey";
+  src: url("../assets/fonts/Aubrey-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #a3b18a;
+}
+
+.container {
+    margin:  auto;
+    text-align: center;   
+    color: #000000;
+}
+
+.images {
+    display: flex;
+    flex-wrap: wrap;         
+    justify-content: center;  
+    gap: 20px;               
+}
+
+.images img {         
+    height: auto;
+    display: block;
+}
