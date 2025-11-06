@@ -4,66 +4,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles-home.css">
+    <title>Home</title>
 
 </head>
 <body>
-    <div class="toptext">
-       
-    </div>
-
-    <!-- Top Tooltip -->
-        <div class="top-tooltip-section">
-            <p id="top-tooltip-text"></p>
-        </div>
-
-    <!--Mouse Tooltip-->
-        <div class="tooltip-section">
-            <p id="tooltip-text"></p>
-        </div>
     
-    <div class="container">
-        <div class="vending-wrapper">
-            <img src="assets/images/VendingClip.png" alt="Vending Machine" class="vending-image">
+        <div id="container">
+            <div id="headerArea">
+                <div id="header" style="height: 191px;"></div>
+                
+            <nav id="navbar" style="margin-bottom: 10px;"><ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="https://phyrestudio.myshopify.com/">Shop</a></li>
+                <li><a href="pages/art.html">Art</a></li>
+                <li><a href="https://www.tumblr.com/xphenixphyrex">Blog</a></li>
+                <li><a href="pages/fun.html">Fun</a></li>
+                <li><a href="pages/worldbuilding.html">Worldbuilding</a></li>
+                <li><a href="pages/about.html">About</a></li>
+              </ul></nav></div>
 
-            <!-- Icons must be 112x 112 pixels-->
-            <!-- Left side slots -->
-            <a href="pages/about.html" class="slot left-slot" style="top: 8%;" data-tooltip="About">
-                <img src="assets\images\Icon.png" alt="About Icon" width="112" height="112"></a>
+            <div id="flex">
+                
+                <main>
+                    <h1>Welcome to my website</h1>
+                
+                    <p>Welcome to my personal website! I am currently learning on how to code and build an website, I did have a version of this site before that I made, but I was unhappy with it, so  now. I am using a layout builder from Sadgirl on Neocites
+                    <p>This website is mainly a place for me to combine my art and other interest into one place. Along with learning to code as this website grows. </p>
+                    <p>I currently most active and post my art on my <a href="https://www.tiktok.com/@phenixphyre" target="_blank"> TikTok</a> which I am currently taking commissions</p>
+                    <p>As for my <a href="https://www.tumblr.com/xphenixphyrex" target="_blank">Blog</a> (which has nothing on it yet) is for also for my Worldbuilding projects and art. </p>
+                    <p>Check out the sidebar for my Web Garden, Sitemap and random stuff that don't fit the other pages. </p>
 
-            <a href="pages/worldbuilding.html" class="slot left-slot" style="top: 21%;" data-tooltip="World Building">
-                <img src="assets/images/WB.png" alt="Worldbuilding Icon" width="112" height="112"> </a>
+                    
 
-            <a href="https://www.tumblr.com/xphenixphyrex" class="slot left-slot" style="top: 34%;" data-tooltip="Blog">
-                <img src="assets/images/Blog.png" alt="Blog Icon" width="112" height="112"> </a>
+                </main>
+                
+            <aside id="leftSidebar" style="margin-right: 10px;"><h2>Updates</h2>
+            <div class="box">
+                
+                <ul style="padding-left: 8px;"> 
+                    <li>I updated this website from my shitty attempt at a home page to Sadgrl's Layout Builder </li>
+                </ul>
+            </div>
+            
+          
+           
+            <h2>Other stuff I think is cool</h2>                                
+            <ul>
+                <li><a href="/pages/resources.html" target="_blank">Cool Resources</a></li>
+                <li><a href="/pages/garden.html" target="_blank">My Garden</a></li> 
+                <li><a href="pages/stuff.html" target="_blank">Random Stuff</a></li>
+                <li><a href="/pages/sitemap.html" target="_blank">Sitemap</a></li>
+            </ul></aside></div>
+            
+            
 
-            <a href="pages/stuff.html" class="slot left-slot" style="top: 48%;" data-tooltip="Random Stuff">
-                <img src="assets/images/Random.png" alt="Random Stuff Icon" width="112" height="112"></a>
 
-            <a href="https://shop.phenixphyre.com" class="slot left-slot" style="top: 61%;" data-tooltip="Store">
-                <img src="assets\images\Shop.png" alt="Store Icon" width="112" height="112"></a>
-
-            <!-- Right side slots -->
-            <a href="pages/art.html" class="slot right-slot" style="top:8%;" data-tooltip="Art">
-                <img src="assets/images/Art.png" alt="Art Icon" width="112" height="112"></a>
-
-            <a href="pages/garden.html" class="slot right-slot" style="top: 21%;" data-tooltip="Digial Garden">
-                <img src="assets\images\Garden.png" alt="Garden Icon" width="112" height="112"></a>
-
-            <a href="pages/fun.html" class="slot right-slot" style="top: 34%;" data-tooltip="Fun and Games">
-                <img src="assets/images/Fun.png" alt="Fun Icon" width="112" height="112"></a>
-
-            <a href="pages/resources.html" class="slot right-slot" style="top: 48%;" data-tooltip="Resources">
-                <img src="assets\images\Resources .png" alt="Resources Icon" width="112" height="112"></a>
-
-            <a href="/pages/sitemap.html" class="slot right-slot" style="top: 61%;" data-tooltip="Sitemap">
-                <img src="assets/images/Map.png" alt="Sitemap Icon" width="112" height="112"> </a>
-
-        </div>
-    </div>
-
-    <!--JS-->
-    <script src="js/script.js"></script>
 </body>
 
 </html>
