@@ -16,6 +16,7 @@
 body {
   font-family: "Aubrey", sans-serif;
   margin: 0;
+  background:radial-gradient(1700px circle at 47.45% 51.76%, #2e3903 0%, #d7e891 100%);
   background-color: #a3b18a;
 }
 
